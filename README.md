@@ -13,7 +13,7 @@ During transient simulation, data from multiple buses, generators, or lines are 
 For each quantity we then derive 7 metrics using the recorded simulation data:
 * Sum of Max
 * 
- <img src="![image](https://github.com/user-attachments/assets/fe78e30b-bfe2-4e5f-9e98-ab596c1d97b7)" width="400"/>
+ <img src="https://github.com/VictorAderinto/IEEE_Paper/blob/main/Sample%20Graph.png" width="400"/>
 
 * Sum of Min
 * Sum of (Max - Min)
