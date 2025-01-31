@@ -23,7 +23,7 @@ For each quantity we then derive 7 metrics using the recorded simulation data:
 * **Sum of Curve Deviation**: For each measurement, the difference between consecutive values is squared, summed together, and averaged i.e. 1/N (Y1 - Y2) ^2+ (Y2 - Y3)^2 +⋯.., This value is determined for all the measurements for that quantity and then summed together.
 * **Sum of Standard Deviation**: Sum of the standard deviation across all measurements for a quantity.
 
-The above metrics were calculated for each power system quantity and an aggregrate ranking error was derived to demonstrate correlation with severity, where lower error implies higher correlation. The results are summarized in the table below:
+The above metrics were calculated for each power system quantity and an aggregrate ranking error was derived to demonstrate correlation with severity, where lower value implies higher correlation. The results are summarized in the table below:
 
 | Quantity                | Metric                    | Aggregate Ranking Error |
 |-------------------------|---------------------------|-------------------------|
