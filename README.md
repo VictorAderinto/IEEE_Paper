@@ -19,5 +19,5 @@ For each quantity we then derive 7 metrics using the recorded simulation data:
 * **Sum of (Max - Min)**: Sum of the max-min value across all measurements for a quantity. From the sample graph above, 0.44 - 0.25 = **0.19** is the max-min value, this is added to the max-min values across all other measurements for that quantity.
 * **Sum of (Last Value - First Value)**: : Sum of the last-first value across all measurements for a quantity. From the sample graph above, 0.34 - 0.35 = **-0.01**  is the last-first value, this is added to the last-first values across all other measurements for that quantity.
 * **Sum of Curve Area**: Sum of the absolute value of the area between the line and the curve. This value is calculated and summed across all measurements for that quantity. 
-* Sum of Curve Deviation
-* Sum of Standard Deviation
+* **Sum of Curve Deviation**: 
+* **Sum of Standard Deviation**: Sum of the standard deviation across all measurements for a quantity.
