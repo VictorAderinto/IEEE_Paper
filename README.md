@@ -7,7 +7,7 @@ To determine a metric with the highest correlation to fault severity, we examine
 *	Bus voltage, frequency, and angle
 *	Interface active and reactive power
   
-<img src="https://github.com/VictorAderinto/IEEE_Paper/blob/main/Quantity%20Measurement.png" alt="Description" width="300"/>
+<img src="https://github.com/VictorAderinto/IEEE_Paper/blob/main/Quantity%20Measurement.png" alt="Description" width="500"/>
 
 From each of these quantities we derived 7 quantities:
 * Sum of Max
