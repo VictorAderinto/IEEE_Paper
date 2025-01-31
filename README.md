@@ -37,11 +37,21 @@ To further illustrate the above calculations, assume that Figure 2 below shows o
 
 * **Sum of Max**: From the above plot, the maximum value (bus voltage) recorded was 0.44. Similarly, we can get the maximum value for all the other measurements (bus voltages in this example). The sum of the max is the summation of these maximum values.
 * **Sum of Min**: The minimum value recorded in the above example was 0.25. Sum of Min is the summation of all the minimum values across all other measurements for that quantity.
-* **Sum of (Max - Min)**: From the above graph, the difference between the maximum and minimum values was 0.19 (0.44 - 0.25). The sum of Max - Min is the summation of all the values across all other measurements for that quantity.
-* **Sum of (Last Value - First Value)**: The last value recorded in the above example was 0.34 and the first value recorded was 0.35. Therefore, the difference between the last value and first value was -0.01 (0.34 - 0.35). The sum of last value - first value is the summation of these values across all other measurements for that quantity.
-* **Sum of Curve Area**: Sum of the absolute value of the area between the line and the curve. This value is calculated and summed across all measurements for that quantity.
+* **Sum of (Max - Min)**: From the above graph, the difference between the maximum and minimum values is 0.19 (0.44 - 0.25). The sum of Max - Min is the summation of this value across all other measurements for that quantity.
+* **Sum of (Last Value - First Value)**: The last value recorded in the above example was 0.34 and the first value recorded was 0.35. Therefore, the difference between the last value and first value is -0.01 (0.34 - 0.35). The sum of last value - first value is the summation of this value across all other measurements for that quantity.
+* **Sum of Curve Area**: The sum of the absolute value of the area between the line and the curve is found using the equation below. This value is calculated and summed across all measurements for that quantity.
+
+ $$ \text{Curve Area} = \frac{1}{N} \sum_{i=1}^{N} (Y_{\text{1}} - Y_i)^2 $$
+  
+  where `Y_1` is the first value in the curve, `Y_i` is the `i`-th value in the curve, and `N` is the number of discrete values in the curve.
+
 * **Sum of Curve Deviation**: For each measurement, the difference between consecutive values is squared, summed together, and averaged, i.e., 1/N (Y1 - Y2)^2 + (Y2 - Y3)^2 + ⋯. This value is determined for all the measurements for that quantity and then summed together.
 * **Sum of Standard Deviation**: Sum of the standard deviation across all measurements for a quantity.
+
+ $$ \text{Sum of Standard Deviation} = \sum_{i=1}^{N} \sigma_i $$
+
+
+  where `σ_i` is the standard deviation of the `i`-th measurement and `N` is the total number of measurements.
 
 The above metrics were calculated for each power system quantity and an aggregrate ranking error was derived to demonstrate correlation with severity, where lower value implies higher correlation. The results are summarized in the table below:
 
