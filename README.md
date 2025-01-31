@@ -1,25 +1,44 @@
 # Determining Relative Fault Severity for Real Time Transient Stability Analysis
 ## Overview of Metrics
 
-To determine a metric with the highest correlation to fault severity, we examined power system quantities including:
-*	Generator active and reactive power, rotor angle
-*	Line active and reactive power,
-*	Bus voltage, frequency, and angle
-*	Interface active and reactive power
+During transient stability simulation, power system study engineers typically record various parameters such as terminal bus voltage, generator angle, line real and reactive power, bus frequency at each time step. Figure one shows simulated voltage recorded during a simulation for a given contingency. Authors use this data to develop the severity metric described in the paper [1]. It is critical that these values are observed across the entire study area for accurate results. For example, if all the monitored buses are clustered around a subregion of the system, then it is likely that any metric devised would be biased to show higher severity for faults near that region and will likely not be reflective of broad system impacts and instead are likely to only represent local impacts. Therefore, to provide an unbiased view of the present state of the system, the monitored values must be evenly distributed across the entire study area. For this reason, parameters that are associated with components only sparsely available through the system was excluded from the further analysis. Static VAr compensators for example of such a data excluded. The quantities which are available broadly through the systems, selected for further analysis are given below: 
 
-During transient simulation, data from multiple buses, generators, or lines are recorded for each quantity above. A sample is shown below:
+* Generator active and reactive power, terminal voltage, speed, rotor angle 
+* Line active and reactive power
+* Bus voltage, frequency, and angle 
+* Interface active and reactive power 
 
-<img src="https://github.com/VictorAderinto/IEEE_Paper/blob/main/Quantity%20Measurement.png" alt="Bus Voltage Simulation Data" width="500"/>
 
-For each quantity we then derive 7 metrics using the recorded simulation data: 
 
-<img src="https://github.com/VictorAderinto/IEEE_Paper/blob/main/Sample%20Graph.png" width="400"/>
+<p align="center">
+  <img src="https://github.com/VictorAderinto/IEEE_Paper/blob/main/Quantity%20Measurement.png" alt="Bus Voltage Simulation Data" width="500"/>
+  <br>
+  <b>Figure 1: Simulation Measurements</b>
+</p>
 
-* **Sum of Max**: Sum of the maximum value across all measurements for a quantity. From the sample graph above, **0.44** is the maximum value, this is added to the maximum values across all other measurements for that quantity.
-* **Sum of Min**: Sum of the minimum value across all measurements for a quantity. From the sample graph above, **0.25** is the minimum value, this is added to the minimum values across all other measurements for that quantity.
-* **Sum of (Max - Min)**: Sum of the max-min value across all measurements for a quantity. From the sample graph above, 0.44 - 0.25 = **0.19** is the max-min value, this is added to the max-min values across all other measurements for that quantity.
-* **Sum of (Last Value - First Value)**: : Sum of the last-first value across all measurements for a quantity. From the sample graph above, 0.34 - 0.35 = **-0.01**  is the last-first value, this is added to the last-first values across all other measurements for that quantity.
-* **Sum of Curve Area**: Sum of the absolute value of the area between the line and the curve. This value is calculated and summed across all measurements for that quantity. 
+During the second phase of the analysis, for each selected quantity following seven metrics were calculated:  
+* Sum of Max  
+* Sum of Min 
+* Sum of (Max-Min) 
+* Sum of (Last Value - First value) 
+* Sum of Curve Area  
+* Sum of Curve Deviation 
+* Sum of Standard Deviation  
+
+To illustrate above calculation further, assume that figure 2 below shows one of the recorded quantities (let’s say voltage of a bus for example). Calculation of above matrices for this curve is explained in the next section.  
+
+<p align="center">
+  <img src="https://github.com/VictorAderinto/IEEE_Paper/blob/main/Sample%20Graph.png" width="400"/>
+  <br>
+  <b>Figure 2: Sample Data</b>
+</p>
+
+
+* **Sum of Max**: From the above plot, the maximum value (bus voltage) recorded was 0.44. Similarly, we can get the maximum value for all the other measurements (bus voltages in this example). The sum of the max is the summation of these maximum value.
+* **Sum of Min**: The minimum value recorded in the above example was 0.25. Sum of Min. is the summation of all the minimum values across all other measurements for that quantity.
+* **Sum of (Max - Min)**: From the above graph, the difference between the maximum and minimum value was 0.19 (0.44 - 0.25). The um of Max-Min is the summation of all the values across all other measurements for that quantity.
+* **Sum of (Last Value - First Value)**: The last value recorded in the above example was 0.34 and the first value recoded was 0.35. Therefore, the difference between the last value and first value was -0.01 (0.34 - 0.35). The sum of last value-first value is the summation of these values across all other measurements for that quantity.
+* **Sum of Curve Area**: Sum of the absolute value of the area between the line and the curve. This value is calculated and summed across all measurements for that quantity.
 * **Sum of Curve Deviation**: For each measurement, the difference between consecutive values is squared, summed together, and averaged i.e. 1/N (Y1 - Y2) ^2+ (Y2 - Y3)^2 +⋯.., This value is determined for all the measurements for that quantity and then summed together.
 * **Sum of Standard Deviation**: Sum of the standard deviation across all measurements for a quantity.
 
@@ -97,3 +116,8 @@ The above metrics were calculated for each power system quantity and an aggregra
 |                         | Sum of Curve Area         | 0.40                    |
 |                         | Sum of Curve Deviation    | 28.60                   |
 |                         | Sum of Standard Deviation | 0.67                    |
+
+
+## References
+
+1.	Aderinto V., Beaudoin C., Wijeweera G., “Determining Relative Fault Severity for Real Time Transient Stability Analysis” submitted for IEEE PES general meeting 2025. 
