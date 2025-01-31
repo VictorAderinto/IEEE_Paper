@@ -10,11 +10,11 @@ To determine a metric with the highest correlation to fault severity, we examine
 During transient simulation, data from multiple buses, generators, or lines are recorded for each quantity above. A sample is shown below:
 <img src="https://github.com/VictorAderinto/IEEE_Paper/blob/main/Quantity%20Measurement.png" alt="Bus Voltage Simulation Data" width="500"/>
 
-For each quantity we then derive 7 metrics using the recorded simulation data:
-* Sum of Max
-* 
-  <img src="https://github.com/VictorAderinto/IEEE_Paper/blob/main/Sample%20Measurements.png" width="400"/>
-  
+For each quantity we then derive 7 metrics using the recorded simulation data: 
+
+<img src="https://github.com/VictorAderinto/IEEE_Paper/blob/main/Sample%20Measurements.png" width="400"/>
+
+* Sum of Max: Sum of the maximum value across all measurements for a quantity. From the sample graph above, "0.44" is the maximum value, this is summed across
 * Sum of Min
 * Sum of (Max - Min)
 * Sum of (Last Value - First Value)
