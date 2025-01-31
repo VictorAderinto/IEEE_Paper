@@ -12,12 +12,12 @@ During transient simulation, data from multiple buses, generators, or lines are 
 
 For each quantity we then derive 7 metrics using the recorded simulation data: 
 
-<img src="https://github.com/VictorAderinto/IEEE_Paper/blob/main/Sample%20Measurements.png" width="400"/>
+<img src="https://github.com/VictorAderinto/IEEE_Paper/blob/main/Sample%20Graph.png" width="400"/>
 
-* Sum of Max: Sum of the maximum value across all measurements for a quantity. From the sample graph above, "0.44" is the maximum value, this is summed across
-* Sum of Min
-* Sum of (Max - Min)
-* Sum of (Last Value - First Value)
+* **Sum of Max**: Sum of the maximum value across all measurements for a quantity. From the sample graph above, **0.44** is the maximum value, this is added to the maximum values across all other measurements for that quantity.
+* **Sum of Min**: Sum of the minimum value across all measurements for a quantity. From the sample graph above, **0.25** is the minimum value, this is added to the minimum values across all other measurements for that quantity.
+* **Sum of (Max - Min)**: Sum of the max-min value across all measurements for a quantity. From the sample graph above, 0.44 - 0.25 = **0.19** is the max-min value, this is added to the max-min values across all other measurements for that quantity.
+* **Sum of (Last Value - First Value)**: : Sum of the last-first value across all measurements for a quantity. From the sample graph above, 0.34 - 0.35 = **-0.01**  is the last-first value, this is added to the last-first values across all other measurements for that quantity.
 * Sum of Curve Area
 * Sum of Curve Deviation
 * Sum of Standard Deviation
