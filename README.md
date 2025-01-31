@@ -45,7 +45,7 @@ To further illustrate the above calculations, assume that Figure 2 below shows o
   
   where `Y_1` is the first value in the curve, `Y_i` is the `i`-th value in the curve, and `N` is the number of discrete values in the curve.
 
-* **Sum of Curve Deviation**: For each measurement, the difference between consecutive values is squared, summed together, and averaged, i.e., 1/N (Y1 - Y2)^2 + (Y2 - Y3)^2 + ⋯. This value is determined for all the measurements for that quantity and then summed together.
+* **Sum of Curve Deviation**: For each measurement, the difference between consecutive values is squared, summed together, and averaged, i.e., 1/N (Y1 - Y2)^2 + (Y2 - Y3)^2 + ⋯. From the sample graph this would be (0.35-0.25)^2 + (0.25 - 0.36) ^2 + (0.36 - 0.377) ^2 ...This value is determined for all the measurements for that quantity and then summed together.
 * **Sum of Standard Deviation**: Sum of the standard deviation across all measurements for a quantity.
 
  $$ \text{Sum of Standard Deviation} = \sum_{i=1}^{N} \sigma_i $$
