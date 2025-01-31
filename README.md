@@ -24,8 +24,8 @@ For each quantity we then derive 7 metrics using the recorded simulation data:
 
 | Quantity | Metric | Aggregate Ranking Error |
 |----------|----------|----------|
-| Row 1 Col 1 | Sum of Max | Row 1 Col 3 |
-| Row 2 Col 1 | Sum of Min | Row 2 Col 3 |
+| Merged Row 1 Col 1 | Sum of Max | Row 1 Col 3 |
+| Merged Row 2 Col 1 | Sum of Min | Row 2 Col 3 |
 | Row 3 Col 1 | Sum of (Last - First) | Row 3 Col 3 |
 | Row 1 Col 1 | Sum of (Max - Min) | Row 1 Col 3 |
 | Row 2 Col 1 | Sum of Curve Area | Row 2 Col 3 |
