@@ -8,6 +8,7 @@ To determine a metric with the highest correlation to fault severity, we examine
 *	Interface active and reactive power
 
 During transient simulation, data from multiple buses, generators, or lines are recorded for each quantity above. A sample is shown below:
+
 <img src="https://github.com/VictorAderinto/IEEE_Paper/blob/main/Quantity%20Measurement.png" alt="Bus Voltage Simulation Data" width="500"/>
 
 For each quantity we then derive 7 metrics using the recorded simulation data: 
