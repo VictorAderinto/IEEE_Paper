@@ -1,11 +1,11 @@
-<p align="center">
-  # Determining Relative Fault Severity for Real Time Transient Stability Analysis
-</p>
+<h1 align="center">
+  Determining Relative Fault Severity for Real Time Transient Stability Analysis
+</h1>
 
 
 <p align="center">
-  Victor Aderinto, Chris Beaudoin, Gayan Wijeweera
-Manitoba Hydro
+  Victor Aderinto, Chris Beaudoin, Gayan Wijeweera<br>
+Manitoba Hydro <br>
 Winnipeg, Canada
 </p>
 
