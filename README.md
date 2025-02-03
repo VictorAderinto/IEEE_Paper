@@ -52,7 +52,7 @@ To further illustrate the above calculations, assume that Figure 2 below shows o
 * **Sum of (Last Value - First Value)**: The last value recorded in the above example was `0.34` and the first value recorded was `0.35`. Therefore, the difference between the last value and first value is `-0.01 (0.34 - 0.35)`. The sum of last value - first value is the summation of this value across all other measurements for that quantity.
 * **Sum of Curve Area**: The sum of the absolute value of the area between the line and the curve is found using the equation below. This value is calculated and summed across all measurements for that quantity.
 
- $$ \text{Curve Area} = \frac{1}{N} \sum_{i=1}^{N} (Y_{\text{1}} - Y_i)^2 $$
+ $$ \text{Curve Area} = \frac{1}{N} \sum_{i=1}^{N} abs(Y_{\text{1}} - Y_i) $$
   
   where `Y_1` is the first value in the curve, `Y_i` is the `i`-th value in the curve, and `N` is the number of discrete values in the curve.
 
