@@ -1,4 +1,9 @@
-# Determining Relative Fault Severity for Real Time Transient Stability Analysis
+                                  **# Determining Relative Fault Severity for Real Time Transient Stability Analysis**
+
+Victor Aderinto, Chris Beaudoin, Gayan Wijeweera
+Manitoba Hydro
+Winnipeg, Canada
+
 ## Overview of Metrics
 
 During transient stability simulation, power system study engineers typically record various parameters such as terminal bus voltage, generator angle, line real and reactive power, and bus frequency at each time step. Figure 1 shows simulated voltage recorded during a simulation for a given contingency. The authors use this data to develop the severity metric described in the paper [1]. It is critical that these values are observed across the entire study area for accurate results. For example, if all the monitored buses are clustered around a subregion of the system, then it is likely that any metric devised would be biased to show higher severity for faults near that region and will likely not reflect broad system impacts, instead only representing local impacts. Therefore, to provide an unbiased view of the present state of the system, the monitored values must be evenly distributed across the entire study area. For this reason, parameters associated with components only sparsely available throughout the system were excluded from further analysis. Static VAr compensators are an example of such data excluded. The quantities which are broadly available throughout the system and selected for further analysis are given below:
