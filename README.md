@@ -72,7 +72,7 @@ The above metrics were calculated for each power system quantity and an aggregra
 * The average ranking across all 21 faults is calculated for each metric, and the deviation from the ideal ranking `(which is [0, 1, 2, 3, 4, 5, 6, 7] or [7, 6, 5, 4, 3, 2, 1])` is determined.
 * This deviation is the aggregate ranking error.
 
-The results are summarized in the table below:
+The metrics in the table consist of measurements from over 260 generators for generator metrics (generator reactive power, generator active power, generator rotor angle), over 80 lines for line metrics (line active power, line reactive power), over 190 buses for bus metrics (bus voltage, bus frequency, bus angle) and 10 interface connections between Manitoba Hydro and other utilities. The results are summarized below:
 
 | Quantity                | Metric                    | Aggregate Ranking Error |
 |-------------------------|---------------------------|-------------------------|
