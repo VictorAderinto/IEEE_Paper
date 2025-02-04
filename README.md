@@ -180,7 +180,7 @@ For further verification, sixteen faults were selected, labeled A through P, in 
 
 For each scenario, the table identifies the contingency closest to the stability boundary and provides the complete rankings of all 16 faults, from most severe to least severe, according to both the metric and CCT.
 
-| Scenario #    | Critical Cty       | Metric Ranking | CCT Ranking |
+| Scenario #    | Critical Ctgy       | Metric Ranking | CCT Ranking |
 |--------------|-------------------|----------------|-------------|
 | 1 | A                    | A, N, P, C, E, K, L, J, D, B, M, G, O, F, H, I | A, N, K, C, E, L, J, P, D, G, B, O, H, M, I, F |
 |  2 | M                    | M, F, P, E, C, K, L, H, J, D, G, O, B, N, I, A | M, K, E, C, L, P, H, J, D, A, F, G, I, B, N, O |
