@@ -148,7 +148,7 @@ The metrics in the table consist of measurements from over 260 generators for ge
 |                         | Sum of Curve Deviation    | 28.60                   |
 |                         | Sum of Standard Deviation | 0.67                    |
 
-## Metric Benchmarking
+## Metric Benchmarking: Varying System Conditions
 
 From the table above, the top 5 metrics most accurate at predicting at severity are: 
 1.	bus voltage – curve_area
@@ -159,7 +159,7 @@ From the table above, the top 5 metrics most accurate at predicting at severity 
 
 We replicated the methodology for developing the metrics, this time using power flows with various system loading conditions, prior outage scenarios, and interface transfer limits. The values in the table represent the aggregrate ranking error given a system condition. If the above metrics consistently quantify severity across all these scenarios, we can confirm their effectiveness as severity quantifiers. The results are summarized in the table below.
 
-|                | bus_v – curve_area | iface_p - min | bus_v – stdev | iface_p – stdev | line_p - max – min |
+|Scenario        | bus_v – curve_area | iface_p - min | bus_v – stdev | iface_p – stdev | line_p - max – min |
 |----------------|--------------------|---------------|---------------|-----------------|--------------------|
 | Power Flow 1 | 0.145              | 3.125         | 0.32          | 0.37            | 0.55               |
 | Power Flow 2 | 0.13               | 1.265         | 0.73          | 0.325           | 0.55               |
@@ -173,6 +173,19 @@ We replicated the methodology for developing the metrics, this time using power 
 | **Avg Deviation**  | **0.152**            | 1.072         | 0.443         | 0.634           | 0.61               |
 
 For each of these system conditions, the bus voltage metric consistently ranked the lowest or one of the lowest, with an error of 0.01 for one of the system conditions and an average error of 0.152, showing its robustness across varying sytem conditions.
+
+## Metric Benchmarking: CCT vs Our Metric
+
+For further verification, sixteen faults were selected, labeled A through P, in a region with known stability is-sues. Five models were prepared, each with a different fault near the edge of stability . Itn follows that the fault nearest to instability should be ranked as the most severe. Both CCT and the proposed metric were used to rank the faults and Tab. I shows the results, including only the most severe fault in each case. However, all 16 faults were ranked using both CCT and the proposed metric [12]. 
+The proposed metric and CCT both correctly select the fault nearest to instability  as the most severe fault in every test case. The remaining 15 faults aretended to be somewhat consistently ranked. The computation time re-quired to calculate CCT for these 16 faults was approxi-mately 200 minutes per model scenario compared to ap-proximately 20 minutes for the proposed metric.
+
+| Scenario #    | Critical Cty      | Metric Most Critical | CCT Most Critical | Metric Ranking | CCT Ranking |
+|--------------|--------------|----------------------|-------------------|----------------|-------------|
+| 1 | A                    | A                 | A              | A, N, P, C, E, K, L, J, D, B, M, G, O, F, H, I | A, N, K, C, E, L, J, P, D, G, B, O, H, M, I, F |
+|  2 | M                    | M                 | M              | M, F, P, E, C, K, L, H, J, D, G, O, B, N, I, A | M, K, E, C, L, P, H, J, D, A, F, G, I, B, N, O |
+|  3 | B                    | B                 | B              | B, D, G, L, K, C, O, P, E, J, H, A, N, M, F, I | B, D, G, L, K, O, P, E, J, C, A, N, M, I, F, H |
+|  4 | E                    | E                 | E              | E, A, P, K, D, B, L, C, H, G, J, M, O, F, I, N | E, L, C, A, D, K, J, G, P, B, O, M, H, F, I, N |
+|  5 | N                    | N                 | N              | N, A, O, K, B, H, P, D, L, G, E, C, M, J, F, I | ** |
 
 ## References
 
