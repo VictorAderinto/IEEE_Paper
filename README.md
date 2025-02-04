@@ -65,6 +65,7 @@ To further illustrate the above calculations, assume that Figure 2 below shows o
 
   where `σ_i` is the standard deviation of the `i`-th measurement and `N` is the total number of measurements.
 
+## Metric Testing
 The above metrics were calculated for each power system quantity and an aggregrate ranking error was derived to demonstrate correlation with severity, where lower value implies higher correlation. The aggregate ranking error is derived as follows:
 * We establish a direct relationship between severity and clearing time.
 * With this relationship established, we design a test simulation with 21 different faults, each with 8 clearing times of increasing magnitude.
@@ -147,6 +148,31 @@ The metrics in the table consist of measurements from over 260 generators for ge
 |                         | Sum of Curve Deviation    | 28.60                   |
 |                         | Sum of Standard Deviation | 0.67                    |
 
+## Metric Benchmarking
+
+From the table above, the top 5 metrics most accurate at predicting at severity are: 
+1.	bus voltage – curve_area
+2.	interface power - min
+3.	bus voltage – stdev
+4.	interface power – stdev
+5.	line active power - max – min
+
+We replicated the methodology for developing the metrics, this time using power flows with various system loading conditions, prior outage scenarios, and interface transfer limits. The values in the table represent the aggregrate ranking error given a system condition. If the above metrics consistently quantify severity across all these scenarios, we can confirm their effectiveness as severity quantifiers. The results are summarized in the table below.
+
+|                | bus_v – curve_area | iface_p - min | bus_v – stdev | iface_p – stdev | line_p - max – min |
+|----------------|--------------------|---------------|---------------|-----------------|--------------------|
+| Power Flow 1 | 0.145              | 3.125         | 0.32          | 0.37            | 0.55               |
+| Power Flow 2 | 0.13               | 1.265         | 0.73          | 0.325           | 0.55               |
+| Power Flow 3 | 0.23               | 0.22          | 0.41          | 0.985           | 0.34               |
+| Power Flow 4 | 0.08               | 0.54          | 0.185         | 0.27            | 0.435              |
+| Power Flow 5 | 0.14               | 0.175         | 0.3           | 0.43            | 0.44               |
+| Power Flow 6 | 0.055              | 0.86          | 0.09          | 0.845           | 1.07               |
+| Power Flow 7 | 0.3                | 1.47          | 0.7           | 1.04            | 0.745              |
+| Power Flow 8 | 0.18               | 1.34          | 1.1           | 0.585           | 0.685              |
+| Power Flow 9 | 0.11               | 0.655         | 0.15          | 0.855           | 0.675              |
+| **Avg Deviation**  | **0.152**            | 1.072         | 0.443         | 0.634           | 0.61               |
+
+For each of these system conditions, the bus voltage metric consistently ranked the lowest or one of the lowest, with an error of 0.01 for one of the system conditions and an average error of 0.152, showing its robustness across varying sytem conditions.
 
 ## References
 
