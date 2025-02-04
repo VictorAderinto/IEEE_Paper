@@ -148,7 +148,7 @@ The metrics in the table consist of measurements from over 260 generators for ge
 |                         | Sum of Curve Deviation    | 28.60                   |
 |                         | Sum of Standard Deviation | 0.67                    |
 
-## Metric Benchmarking: Varying System Conditions
+## Broad System Benchmarking
 
 From the table above, the top 5 metrics most accurate at predicting at severity are: 
 1.	bus voltage – curve_area
@@ -174,7 +174,7 @@ We replicated the methodology for developing the metrics, this time using power 
 
 For each of these system conditions, the bus voltage metric consistently ranked the lowest or one of the lowest, with an error of 0.01 for one of the system conditions and an average error of 0.152, showing its robustness across varying sytem conditions.
 
-## Metric Benchmarking: CCT vs Our Metric
+## Benchmarking against CCT
 
 For further verification, sixteen faults were selected, labeled A through P, in a region with known stability issues. Five scenarios were prepared, each with a different fault close to the stability boundary. It follows that the fault nearest to instability should be ranked as the most severe. Both CCT and the proposed metric were used to rank the faults and the results are summarized in the table below.
 
