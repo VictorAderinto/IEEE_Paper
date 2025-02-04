@@ -176,16 +176,19 @@ For each of these system conditions, the bus voltage metric consistently ranked 
 
 ## Metric Benchmarking: CCT vs Our Metric
 
-For further verification, sixteen faults were selected, labeled A through P, in a region with known stability is-sues. Five models were prepared, each with a different fault near the edge of stability . Itn follows that the fault nearest to instability should be ranked as the most severe. Both CCT and the proposed metric were used to rank the faults and Tab. I shows the results, including only the most severe fault in each case. However, all 16 faults were ranked using both CCT and the proposed metric [12]. 
-The proposed metric and CCT both correctly select the fault nearest to instability  as the most severe fault in every test case. The remaining 15 faults aretended to be somewhat consistently ranked. The computation time re-quired to calculate CCT for these 16 faults was approxi-mately 200 minutes per model scenario compared to ap-proximately 20 minutes for the proposed metric.
+For further verification, sixteen faults were selected, labeled A through P, in a region with known stability issues. Five scenarios were prepared, each with a different fault close to the stability boundary. It follows that the fault nearest to instability should be ranked as the most severe. Both CCT and the proposed metric were used to rank the faults and the results are summarized in the table below.
 
-| Scenario #    | Critical Cty      | Metric Most Critical | CCT Most Critical | Metric Ranking | CCT Ranking |
-|--------------|--------------|----------------------|-------------------|----------------|-------------|
-| 1 | A                    | A                 | A              | A, N, P, C, E, K, L, J, D, B, M, G, O, F, H, I | A, N, K, C, E, L, J, P, D, G, B, O, H, M, I, F |
-|  2 | M                    | M                 | M              | M, F, P, E, C, K, L, H, J, D, G, O, B, N, I, A | M, K, E, C, L, P, H, J, D, A, F, G, I, B, N, O |
-|  3 | B                    | B                 | B              | B, D, G, L, K, C, O, P, E, J, H, A, N, M, F, I | B, D, G, L, K, O, P, E, J, C, A, N, M, I, F, H |
-|  4 | E                    | E                 | E              | E, A, P, K, D, B, L, C, H, G, J, M, O, F, I, N | E, L, C, A, D, K, J, G, P, B, O, M, H, F, I, N |
-|  5 | N                    | N                 | N              | N, A, O, K, B, H, P, D, L, G, E, C, M, J, F, I | ** |
+For each scenario, the table identifies the contingency closest to the stability boundary and provides the complete rankings of all 16 faults, from most severe to least severe, according to both the metric and CCT.
+
+| Scenario #    | Critical Cty       | Metric Ranking | CCT Ranking |
+|--------------|-------------------|----------------|-------------|
+| 1 | A                    | A, N, P, C, E, K, L, J, D, B, M, G, O, F, H, I | A, N, K, C, E, L, J, P, D, G, B, O, H, M, I, F |
+|  2 | M                    | M, F, P, E, C, K, L, H, J, D, G, O, B, N, I, A | M, K, E, C, L, P, H, J, D, A, F, G, I, B, N, O |
+|  3 | B                    | B, D, G, L, K, C, O, P, E, J, H, A, N, M, F, I | B, D, G, L, K, O, P, E, J, C, A, N, M, I, F, H |
+|  4 | E                   | E, A, P, K, D, B, L, C, H, G, J, M, O, F, I, N | E, L, C, A, D, K, J, G, P, B, O, M, H, F, I, N |
+|  5 | N                    | N, A, O, K, B, H, P, D, L, G, E, C, M, J, F, I | N, K, B, D, L, G, P, C, A, O, E, J, M, F, I, H |
+
+As seen above, the proposed metric and CCT both correctly select the fault nearest to instability as the most severe fault in every test case. The remaining 15 faults are somewhat consistently ranked. The computation time required to calculate CCT for these 16 faults was approximately 200 minutes per scenario compared to approximately 20 minutes for the proposed metric.
 
 ## References
 
