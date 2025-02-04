@@ -73,7 +73,9 @@ The above metrics were calculated for each power system quantity and an aggregra
 * The average ranking across all 21 faults is calculated for each metric, and the deviation from the ideal ranking `(which is [0, 1, 2, 3, 4, 5, 6, 7] or [7, 6, 5, 4, 3, 2, 1])` is determined.
 * This deviation is the aggregate ranking error.
 
-The metrics in the table consist of measurements from over 260 generators for generator metrics (generator reactive power, generator active power, generator rotor angle), over 80 lines for line metrics (line active power, line reactive power), over 190 buses for bus metrics (bus voltage, bus frequency, bus angle) and 10 interface connections between Manitoba Hydro and other utilities. The results are summarized below:
+The metrics in Table 1 consist of measurements from over 260 generators for generator metrics (generator reactive power, generator active power, generator rotor angle), over 80 lines for line metrics (line active power, line reactive power), over 190 buses for bus metrics (bus voltage, bus frequency, bus angle) and 10 interface connections between Manitoba Hydro and other utilities. The results are summarized below:
+
+<b>Table 1: Summary of Metric Evaluation</b>
 
 | Quantity                | Metric                    | Aggregate Ranking Error |
 |-------------------------|---------------------------|-------------------------|
@@ -150,14 +152,16 @@ The metrics in the table consist of measurements from over 260 generators for ge
 
 ## Broad System Benchmarking
 
-From the table above, the top 5 metrics most accurate at predicting at severity are: 
+From Table 1 above, the top 5 metrics most accurate at predicting at severity are: 
 1.	bus voltage – curve_area
 2.	interface power - min
 3.	bus voltage – stdev
 4.	interface power – stdev
 5.	line active power - max – min
 
-We replicated the methodology for developing the metrics, this time using power flows with various system loading conditions, prior outage scenarios, and interface transfer limits. The values in the table represent the aggregrate ranking error given a system condition. If the above metrics consistently quantify severity across all these scenarios, we can confirm their effectiveness as severity quantifiers. The results are summarized in the table below.
+We replicated the methodology for developing the metrics, this time using power flows with various system loading conditions, prior outage scenarios, and interface transfer limits. The values in Table 2 represent the aggregrate ranking error given a system condition. If the above metrics consistently quantify severity across all these scenarios, we can confirm their effectiveness as severity quantifiers. The results are summarized in Table 2 below.
+
+<b>Table 2: Summary of Broad System Benchmarking </b>
 
 |Scenario        | bus_v – curve_area | iface_p - min | bus_v – stdev | iface_p – stdev | line_p - max – min |
 |----------------|--------------------|---------------|---------------|-----------------|--------------------|
@@ -176,9 +180,11 @@ For each of these system conditions, the bus voltage metric consistently ranked 
 
 ## Benchmarking against CCT
 
-For further verification, sixteen faults were selected, labeled A through P, in a region with known stability issues. Five scenarios were prepared, each with a different fault close to the stability boundary. It follows that the fault nearest to instability should be ranked as the most severe. Both CCT and the proposed metric were used to rank the faults and the results are summarized in the table below.
+For further verification, sixteen faults were selected, labeled A through P, in a region with known stability issues. Five scenarios were prepared, each with a different fault close to the stability boundary. It follows that the fault nearest to instability should be ranked as the most severe. Both CCT and the proposed metric were used to rank the faults and the results are summarized in Table 3 below.
 
-For each scenario, the table identifies the contingency closest to the stability boundary and provides the complete rankings of all 16 faults, from most severe to least severe, according to both the metric and CCT.
+For each scenario, Table 3 identifies the contingency closest to the stability boundary and provides the complete rankings of all 16 faults, from most severe to least severe, according to both the metric and CCT.
+
+<b>Table 3: Summary of Benchmarking against CCT</b>
 
 | Scenario #    | Critical Ctgy       | Metric Ranking | CCT Ranking |
 |--------------|-------------------|----------------|-------------|
